@@ -2,7 +2,7 @@
 
 **Lightweight Unified Structure-aware Pipeline for Efficient Traffic Object Detection**
 
-This repository is a preliminary public preview for the submitted LUSP-YOLO manuscript. It documents the model specification, the Shared-5 structured-pruning policy, the evaluation protocol, and the reported benchmark results. Full training, pruning, recovery, distillation, and checkpoint files are intentionally not included at this stage.
+This repository currently provides a preliminary public release of LUSP-YOLO, including the model specification, Shared-5 structured-pruning policy, evaluation protocol, and reported benchmark results. The complete source code, training and pruning scripts, evaluation tools, and pretrained checkpoints will be released after the review process.
 
 ## Overview
 

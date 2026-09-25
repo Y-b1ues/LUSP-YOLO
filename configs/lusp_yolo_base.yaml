@@ -1,0 +1,21 @@
+name: LUSP-YOLO-Base
+base_model: YOLO11s
+
+replacements:
+  model.8:
+    from: C3k2
+    to: C3k2PConv
+  model.22:
+    from: C3k2
+    to: C3k2PConv
+
+pconv:
+  partial_ratio: 0.25
+  expansion: 1.0
+  kernel_size: 3
+  shortcut: true
+
+notes:
+  - "Only the selected high-level P5 backbone/neck blocks are redesigned."
+  - "P3/P4 pathways and the three-scale prediction interface are preserved."
+  - "The prediction head is instantiated with the class count of each benchmark."

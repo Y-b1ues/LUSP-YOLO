@@ -1,0 +1,34 @@
+name: Shared-5
+
+direct_roots:
+  - model.7
+  - model.8.cv2
+  - model.10.cv2
+  - model.20
+  - model.22.cv2
+
+local_ratio: 0.22
+
+importance:
+  type: BN_scale
+  score: abs_gamma
+
+alignment:
+  multiple: 8
+
+dependency:
+  enabled: true
+  description: "Dependency-aware channel propagation"
+
+protected:
+  - Detect_head
+  - prediction_widths
+  - DFL_interface
+  - PConv_channel_split
+
+recovery:
+  epochs: 50
+  optimizer: AdamW
+  initial_lr: 7.14e-5
+  patience: 0
+  distillation: false
